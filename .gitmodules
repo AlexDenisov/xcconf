@@ -1,0 +1,3 @@
+[submodule "xcconf_tests/Vendor/Cedar"]
+	path = xcconf_tests/Vendor/Cedar
+	url = git@github.com:pivotal/cedar.git
