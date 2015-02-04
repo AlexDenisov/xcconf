@@ -11,7 +11,10 @@
 		46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B2B1A82D1E8004DEA43 /* Cedar.framework */; };
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
+		46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */; };
+		6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
 		6B87685105B16FBB956207FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A1ADBB157BCE3899AAD /* main.m */; };
+		6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,9 +122,12 @@
 		46C02B0B1A82D0B5004DEA43 /* xcconf_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf_tests; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
 		46C02B451A82D2E4004DEA43 /* YAML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAML.framework; sourceTree = "<group>"; };
+		46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigSpec.mm; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		6B87631056EE3A08570605A7 /* XCCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfig.h; sourceTree = "<group>"; };
 		6B8765C1ABC57632BAE6B38A /* xcconf_tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcconf_tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B876A1ADBB157BCE3899AAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B876D051620971E4CDAE200 /* XCCConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				46C02AEA1A82CBB0004DEA43 /* main.m */,
+				6B876E6BD68D1DC8589179AE /* Sources */,
 			);
 			path = xcconf;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 			children = (
 				6B876E90EEEC1F815146260E /* SupportingFiles */,
 				6B87686217290086A2F3FAF7 /* Vendor */,
+				6B876604724C509DD8EB073C /* Specs */,
 			);
 			path = xcconf_tests;
 			sourceTree = "<group>";
@@ -200,6 +208,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6B876604724C509DD8EB073C /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
 		6B87686217290086A2F3FAF7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +230,15 @@
 				46C02B451A82D2E4004DEA43 /* YAML.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B876E6BD68D1DC8589179AE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6B876D051620971E4CDAE200 /* XCCConfig.m */,
+				6B87631056EE3A08570605A7 /* XCCConfig.h */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		6B876E90EEEC1F815146260E /* SupportingFiles */ = {
@@ -396,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
+				6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */,
 				6B87685105B16FBB956207FE /* main.m in Sources */,
+				6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
