@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		46C02AEB1A82CBB0004DEA43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02AEA1A82CBB0004DEA43 /* main.m */; };
-		46C02B0E1A82D0B5004DEA43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B0D1A82D0B5004DEA43 /* Foundation.framework */; };
 		46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B2B1A82D1E8004DEA43 /* Cedar.framework */; };
+		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
+		46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		6B87685105B16FBB956207FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A1ADBB157BCE3899AAD /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -116,8 +117,8 @@
 		46C02AE71A82CBB0004DEA43 /* xcconf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C02AEA1A82CBB0004DEA43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46C02B0B1A82D0B5004DEA43 /* xcconf_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf_tests; sourceTree = BUILT_PRODUCTS_DIR; };
-		46C02B0D1A82D0B5004DEA43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
+		46C02B451A82D2E4004DEA43 /* YAML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAML.framework; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		6B8765C1ABC57632BAE6B38A /* xcconf_tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcconf_tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B876A1ADBB157BCE3899AAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */,
-				46C02B0E1A82D0B5004DEA43 /* Foundation.framework in Frameworks */,
+				46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +150,8 @@
 			children = (
 				46C02AE91A82CBB0004DEA43 /* xcconf */,
 				46C02B0F1A82D0B5004DEA43 /* xcconf_tests */,
-				46C02B0C1A82D0B5004DEA43 /* Frameworks */,
 				46C02AE81A82CBB0004DEA43 /* Products */,
+				6B876C4226F13DE461A2A2B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,14 +170,6 @@
 				46C02AEA1A82CBB0004DEA43 /* main.m */,
 			);
 			path = xcconf;
-			sourceTree = "<group>";
-		};
-		46C02B0C1A82D0B5004DEA43 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				46C02B0D1A82D0B5004DEA43 /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		46C02B0F1A82D0B5004DEA43 /* xcconf_tests */ = {
@@ -212,6 +206,14 @@
 				46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		6B876C4226F13DE461A2A2B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46C02B451A82D2E4004DEA43 /* YAML.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		6B876E90EEEC1F815146260E /* SupportingFiles */ = {
@@ -485,6 +487,10 @@
 		46C02AEF1A82CBB0004DEA43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -492,6 +498,10 @@
 		46C02AF01A82CBB0004DEA43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -499,6 +509,10 @@
 		46C02B181A82D0B5004DEA43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcconf_tests/SupportingFiles/xcconf_tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -512,6 +526,10 @@
 		46C02B191A82D0B5004DEA43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcconf_tests/SupportingFiles/xcconf_tests-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
