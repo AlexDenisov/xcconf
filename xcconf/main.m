@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XCCDriver.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSString *input = @( getenv("INPUT_FILE_PATH") );
+        NSString *output =  @( getenv("SCRIPT_OUTPUT_FILE_0") );
+        NSString *configuration = @( getenv("CONFIGURATION") );
+        
+        XCCDriver *driver = [[XCCDriver alloc] initWithInputPath:input
+                                                      outputPath:output
+                                               configurationName:configuration];
+        [driver generateAndSaveOutputFile];
     }
     return 0;
 }

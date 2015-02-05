@@ -12,6 +12,8 @@
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B961A82DC73004DEA43 /* Valid.yaml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46C02B791A82D78C004DEA43 /* Valid.yaml */; };
+		46C02BE01A83D275004DEA43 /* XCCDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BDF1A83D275004DEA43 /* XCCDriver.m */; };
+		46C02BE11A83D275004DEA43 /* XCCDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BDF1A83D275004DEA43 /* XCCDriver.m */; };
 		6B8762C7F247B9AF83E4358E /* XCCConfigurationParserSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765FB42DE74340DB55E2E /* XCCConfigurationParserSpec.mm */; };
 		6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876800B796EE840B9A16BF /* XCCEnvironment.m */; };
 		6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B876ACA622537DA2A81924C /* XCCConfigurationCodeGeneratorSpec.mm */; };
@@ -146,6 +148,8 @@
 		46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
 		46C02B451A82D2E4004DEA43 /* YAML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAML.framework; sourceTree = "<group>"; };
 		46C02B791A82D78C004DEA43 /* Valid.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Valid.yaml; sourceTree = "<group>"; };
+		46C02BDE1A83D275004DEA43 /* XCCDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDriver.h; sourceTree = "<group>"; };
+		46C02BDF1A83D275004DEA43 /* XCCDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDriver.m; sourceTree = "<group>"; };
 		6B8761C1DFD97345FAF26699 /* XCCParametersCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCParametersCodeGenerator.h; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		6B87635E42B002FB2B162D10 /* XCCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironment.h; sourceTree = "<group>"; };
@@ -285,8 +289,8 @@
 		6B876453836900DC782B2CFA /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */,
 				6B876ABF87FADD458ADEEFCA /* XCCConfigurationParser.h */,
+				6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -295,9 +299,9 @@
 			isa = PBXGroup;
 			children = (
 				6B87652CC09997AE8E8BF777 /* XCCConfigurationCodeGenerator.h */,
-				6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */,
 				6B8766AA7AC6A17635668DC3 /* XCCConfigurationCodeGenerator.m */,
 				6B8761C1DFD97345FAF26699 /* XCCParametersCodeGenerator.h */,
+				6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */,
 			);
 			path = CodeGen;
 			sourceTree = "<group>";
@@ -308,6 +312,7 @@
 				6B876341E3B94F5603CA3396 /* CodeGen */,
 				6B8768BC50FCC285C9B51694 /* Parser */,
 				6B876045475ABA26C948AF5B /* Models */,
+				6B876A9A0C3A0B2DEEED5924 /* Driver */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -328,6 +333,13 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		6B876A9A0C3A0B2DEEED5924 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
 		6B876C4226F13DE461A2A2B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,12 +348,22 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		6B876CF1BF975F267A0F3A36 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				46C02BDE1A83D275004DEA43 /* XCCDriver.h */,
+				46C02BDF1A83D275004DEA43 /* XCCDriver.m */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
 		6B876E6BD68D1DC8589179AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				6B876180866B9C547D4927DA /* Models */,
 				6B876453836900DC782B2CFA /* Parser */,
 				6B8765EAE32F3DA06CCC9AD5 /* CodeGen */,
+				6B876CF1BF975F267A0F3A36 /* Driver */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -530,6 +552,7 @@
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
 				6B87686317B12341ED5F44B5 /* XCCYAMLConfiguration.m in Sources */,
 				6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */,
+				46C02BE01A83D275004DEA43 /* XCCDriver.m in Sources */,
 				6B876BDE919DEFF90AB89D5F /* XCCConfigurationParser.m in Sources */,
 				6B8767DE665E2181CFB953FD /* XCCParametersCodeGenerator.m in Sources */,
 				6B87690D6A134317D45AE37F /* XCCConfigurationCodeGenerator.m in Sources */,
@@ -544,6 +567,7 @@
 				6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */,
 				6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */,
 				6B8766E0624E22E8E1A95E5B /* XCCConfigurationParser.m in Sources */,
+				46C02BE11A83D275004DEA43 /* XCCDriver.m in Sources */,
 				6B876774D7377B3E9FDE1B94 /* XCCParametersCodeGenerator.m in Sources */,
 				6B876F62B619F1BC54A86AEE /* XCCConfigurationCodeGenerator.m in Sources */,
 				6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */,
