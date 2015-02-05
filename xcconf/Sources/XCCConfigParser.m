@@ -17,9 +17,11 @@
                                                               options:kYAMLReadOptionStringScalars
                                                                 error:&error];
     
-    XCCConfig *config = [XCCConfig new];
-    config.principalClassName = rawConfig[@"principalClass"];
-    config.environments = [self environmentsFromDictionary:rawConfig];
+    NSString *className = rawConfig[@"principalClass"];
+    NSArray *environments = [self environmentsFromDictionary:rawConfig];
+    
+    XCCConfig *config = [[XCCConfig alloc] initWithPrincipalClassName:className
+                                                         environments:environments];
     
     return config;
 }
@@ -31,9 +33,8 @@
             continue;
         }
         
-        XCCEnvironment *environment = [XCCEnvironment new];
-        environment.name = key;
-        environment.parameters = dictionary[key];
+        XCCEnvironment *environment = [[XCCEnvironment alloc] initWithName:key
+                                                                parameters:dictionary[key]];
         
         [environments addObject:environment];
     }

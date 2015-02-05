@@ -9,9 +9,10 @@
 
 @interface XCCConfig : NSObject
 
-@property (copy) NSString *principalClassName;
-@property (copy) NSArray *environments;
+@property (copy, readonly) NSString *principalClassName;
+@property (copy, readonly) NSArray *environments;
 
+- (instancetype)initWithPrincipalClassName:(NSString *)name environments:(NSArray *)environments NS_DESIGNATED_INITIALIZER;
 - (XCCEnvironment *)objectForKeyedSubscript:(NSString *)key;
 
 @end

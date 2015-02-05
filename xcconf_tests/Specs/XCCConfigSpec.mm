@@ -14,6 +14,10 @@ describe(@"XCCConfig", ^{
     });
     
     describe(@"has method", ^{
+        
+        it(@"initWithPrincipalClassName:environments:", ^{
+            subject should respond_to(@selector(initWithPrincipalClassName:environments:));
+        });
     
         it(@"principalClass", ^{
             subject should respond_to(@selector(principalClassName));

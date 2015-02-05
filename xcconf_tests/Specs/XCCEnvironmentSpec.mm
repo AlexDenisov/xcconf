@@ -15,6 +15,10 @@ describe(@"XCCEnvironment", ^{
     
     describe(@"has method", ^{
         
+        it(@"initWithName:parameters:", ^{
+            subject should respond_to(@selector(initWithName:parameters:));
+        });
+        
         it(@"name", ^{
             subject should respond_to(@selector(name));
         });

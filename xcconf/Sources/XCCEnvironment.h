@@ -7,7 +7,9 @@
 
 @interface XCCEnvironment : NSObject
 
-@property (copy) NSString *name;
-@property (copy) NSDictionary *parameters;
+@property (copy, readonly) NSString *name;
+@property (copy, readonly) NSDictionary *parameters;
+
+- (instancetype)initWithName:(NSString *)name parameters:(NSDictionary *)parameters;
 
 @end

@@ -6,7 +6,23 @@
 #import "XCCConfig.h"
 #import "XCCEnvironment.h"
 
+@interface XCCConfig ()
+
+@property (copy) NSString *principalClassName;
+@property (copy) NSArray *environments;
+
+@end
+
 @implementation XCCConfig
+
+- (instancetype)initWithPrincipalClassName:(NSString *)name environments:(NSArray *)environments {
+    self = [super init];
+    
+    self.principalClassName = name;
+    self.environments = environments;
+    
+    return self;
+}
 
 - (XCCEnvironment *)objectForKeyedSubscript:(NSString *)key {
     for (XCCEnvironment *environment in self.environments) {

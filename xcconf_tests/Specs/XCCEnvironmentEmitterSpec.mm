@@ -6,9 +6,9 @@ using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
 XCCEnvironment *environmentWithParameters(NSDictionary *parameters) {
-    XCCEnvironment *environment = [XCCEnvironment new];
-    environment.name = @"doesn't matter";
-    environment.parameters = parameters;
+    NSString *name = @"doesn't matter";
+    XCCEnvironment *environment = [[XCCEnvironment alloc] initWithName:name
+                                                            parameters:parameters];
     return environment;
 }
 
