@@ -1,0 +1,11 @@
+principalClass: XCCPrincipalClass
+
+Debug: &Debug
+    serverAddress: https://fooo-bar.buzz
+    APIKey: qwe123!!qwe
+
+Release:
+    serverAddress: https://prod.fooo-bar.buzz
+    APIKey: qwe123qwe
+
+DebugCopy: *Debug

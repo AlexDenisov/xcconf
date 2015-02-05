@@ -19,8 +19,12 @@ describe(@"XCCConfig", ^{
             subject should respond_to(@selector(principalClassName));
         });
         
-        it(@"configurations", ^{
-            subject should respond_to(@selector(configurations));
+        it(@"environments", ^{
+            subject should respond_to(@selector(environments));
+        });
+        
+        it(@"objectForKeyedSubscript", ^{
+            subject[@"key"] should be_nil;
         });
     
     });

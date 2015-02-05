@@ -12,9 +12,16 @@
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */; };
+		46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */; };
+		46C02B961A82DC73004DEA43 /* Valid.yaml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46C02B791A82D78C004DEA43 /* Valid.yaml */; };
+		46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */; };
+		6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */; };
+		6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */; };
 		6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
 		6B87685105B16FBB956207FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A1ADBB157BCE3899AAD /* main.m */; };
 		6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
+		6B876C0B7A3FB51AEC4833C9 /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */; };
+		6B876D19C0A8E03E31A882C8 /* XCCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +121,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		46C02B881A82DC69004DEA43 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				46C02B961A82DC73004DEA43 /* Valid.yaml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -123,11 +140,18 @@
 		46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
 		46C02B451A82D2E4004DEA43 /* YAML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAML.framework; sourceTree = "<group>"; };
 		46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigSpec.mm; sourceTree = "<group>"; };
+		46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigParserSpec.mm; sourceTree = "<group>"; };
+		46C02B791A82D78C004DEA43 /* Valid.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Valid.yaml; sourceTree = "<group>"; };
+		46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentSpec.mm; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		6B87631056EE3A08570605A7 /* XCCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfig.h; sourceTree = "<group>"; };
 		6B8765C1ABC57632BAE6B38A /* xcconf_tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcconf_tests-Prefix.pch"; sourceTree = "<group>"; };
+		6B876880BAE9A79921122F8A /* XCCConfigParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfigParser.h; sourceTree = "<group>"; };
 		6B876A1ADBB157BCE3899AAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B876A9C298969624B41F04B /* XCCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironment.h; sourceTree = "<group>"; };
+		6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCEnvironment.m; sourceTree = "<group>"; };
 		6B876D051620971E4CDAE200 /* XCCConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfig.m; sourceTree = "<group>"; };
+		6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfigParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +209,7 @@
 				6B876E90EEEC1F815146260E /* SupportingFiles */,
 				6B87686217290086A2F3FAF7 /* Vendor */,
 				6B876604724C509DD8EB073C /* Specs */,
+				6B8763C7105B935D43516F01 /* Fixtures */,
 			);
 			path = xcconf_tests;
 			sourceTree = "<group>";
@@ -208,10 +233,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6B8763C7105B935D43516F01 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				46C02B791A82D78C004DEA43 /* Valid.yaml */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		6B876604724C509DD8EB073C /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */,
+				46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */,
+				46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -235,8 +270,12 @@
 		6B876E6BD68D1DC8589179AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6B876D051620971E4CDAE200 /* XCCConfig.m */,
 				6B87631056EE3A08570605A7 /* XCCConfig.h */,
+				6B876D051620971E4CDAE200 /* XCCConfig.m */,
+				6B876880BAE9A79921122F8A /* XCCConfigParser.h */,
+				6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */,
+				6B876A9C298969624B41F04B /* XCCEnvironment.h */,
+				6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -277,6 +316,7 @@
 			buildPhases = (
 				46C02B081A82D0B5004DEA43 /* Sources */,
 				46C02B091A82D0B5004DEA43 /* Frameworks */,
+				46C02B881A82DC69004DEA43 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -293,6 +333,7 @@
 		46C02ADF1A82CBB0004DEA43 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XCC;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = AlexDenisov;
 				TargetAttributes = {
@@ -422,6 +463,8 @@
 			files = (
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
 				6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */,
+				6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */,
+				6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +474,11 @@
 			files = (
 				46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */,
 				6B87685105B16FBB956207FE /* main.m in Sources */,
+				46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */,
 				6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */,
+				6B876D19C0A8E03E31A882C8 /* XCCConfigParser.m in Sources */,
+				46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */,
+				6B876C0B7A3FB51AEC4833C9 /* XCCEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

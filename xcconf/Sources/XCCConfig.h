@@ -5,9 +5,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class XCCEnvironment;
+
 @interface XCCConfig : NSObject
 
 @property (copy) NSString *principalClassName;
-@property (copy) NSArray *configurations;
+@property (copy) NSArray *environments;
+
+- (XCCEnvironment *)objectForKeyedSubscript:(NSString *)key;
 
 @end
