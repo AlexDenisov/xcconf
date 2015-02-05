@@ -1,0 +1,9 @@
+principalClass: Config
+
+Debug:
+    serverAddress: https://fooo-bar.buzz
+    analyticsKey: debug_key_123
+
+Release:
+    serverAddress: https://prod.fooo-bar.buzz
+    analyticsKey: production_key_123
