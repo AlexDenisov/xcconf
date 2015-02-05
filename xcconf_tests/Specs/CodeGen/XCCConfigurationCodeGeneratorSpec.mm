@@ -60,8 +60,8 @@ describe(@"XCCConfigurationCodeGenerator", ^{
             
             NSString *expectedCode = @"#import <Foundation/Foundation.h>\n"
                                      @"@interface Configuration : NSObject @end\n"
-                                     @"- (NSString *)debugKey { return @\"debugValue\"; }"
                                      @"@implementation Configuration\n"
+                                     @"- (NSString *)debugKey { return @\"debugValue\"; }\n"
                                      @"@end\n";
             NSString *actualCode = [subject generateCode];
             

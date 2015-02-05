@@ -4,6 +4,7 @@
 //
 
 #import "XCCConfigurationCodeGenerator.h"
+#import "XCCParametersCodeGenerator.h"
 #import "XCCYAMLConfiguration.h"
 
 @interface XCCConfigurationCodeGenerator ()
@@ -32,12 +33,18 @@
     [code appendString:self.implementation];
     [code appendString:self.parameters];
     [code appendString:self.end];
-    
     return [code copy];
 }
 
 - (NSString *)parameters {
-    return nil;
+    XCCEnvironment *environment = self.config[self.environmentName];
+    XCCParametersCodeGenerator *codeGen = [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];
+    NSString *code = [codeGen generateCode];
+    if (code.length) {
+        code = [code stringByAppendingString:@"\n"];
+    }
+    
+    return code;
 }
 
 - (NSString *)import {
