@@ -7,7 +7,7 @@ YAML-based configuration for ObjC projects
 Just clone project and run `make install`. It will build the project and put executable into `/usr/local/bin`
 
 ```bash
-git clone git@github.com/AlexDenisov/xcconf.git
+git clone git@github.com:AlexDenisov/xcconf.git
 cd xcconf
 make install
 ```
