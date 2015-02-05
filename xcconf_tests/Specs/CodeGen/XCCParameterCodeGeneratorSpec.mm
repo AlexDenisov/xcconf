@@ -1,5 +1,5 @@
 #import <Cedar/Cedar.h>
-#import "XCCEnvironmentEmitter.h"
+#import "XCCParametersCodeGenerator.h"
 #import "XCCEnvironment.h"
 
 using namespace Cedar::Matchers;
@@ -12,13 +12,13 @@ XCCEnvironment *environmentWithParameters(NSDictionary *parameters) {
     return environment;
 }
 
-SPEC_BEGIN(XCCEnvironmentEmitterSpec)
+SPEC_BEGIN(XCCParameterCodeGeneratorSpec)
 
-describe(@"XCCEnvironmentEmitter", ^{
-    __block XCCEnvironmentEmitter *subject;
+describe(@"XCCParametersCodeGenerator", ^{
+    __block XCCParametersCodeGenerator *subject;
 
     beforeEach(^{
-        subject = [XCCEnvironmentEmitter new];
+        subject = [XCCParametersCodeGenerator new];
     });
     
     describe(@"has method", ^{
@@ -27,8 +27,8 @@ describe(@"XCCEnvironmentEmitter", ^{
             subject should respond_to(@selector(initWithEnvironment:));
         });
         
-        it(@"emitCodeGen", ^{
-            subject should respond_to(@selector(emitCodeGen));
+        it(@"generateCode", ^{
+            subject should respond_to(@selector(generateCode));
         });
         
     });
@@ -38,10 +38,10 @@ describe(@"XCCEnvironmentEmitter", ^{
         it(@"with one parmeter", ^{
             auto parameters = @{ @"key" : @"value" };
             auto env = environmentWithParameters(parameters);
-            subject = [[XCCEnvironmentEmitter alloc] initWithEnvironment:env];
+            subject = [[XCCParametersCodeGenerator alloc] initWithEnvironment:env];
             
             NSString *expectedCode = @"- \(NSString *)key { return @\"value\"; }";
-            NSString *actualCode = [subject emitCodeGen];
+            NSString *actualCode = [subject generateCode];
             
             actualCode should equal(expectedCode);
         });
@@ -49,11 +49,11 @@ describe(@"XCCEnvironmentEmitter", ^{
         it(@"with multiple parameters", ^{
             auto parameters = @{ @"key0" : @"value0", @"key1" : @"value1" };
             auto env = environmentWithParameters(parameters);
-            subject = [[XCCEnvironmentEmitter alloc] initWithEnvironment:env];
+            subject = [[XCCParametersCodeGenerator alloc] initWithEnvironment:env];
             
             NSString *expectedCode = @"- (NSString *)key1 { return @\"value1\"; }\n"
                                      @"- (NSString *)key0 { return @\"value0\"; }";
-            NSString *actualCode = [subject emitCodeGen];
+            NSString *actualCode = [subject generateCode];
             
             actualCode should equal(expectedCode);
         });

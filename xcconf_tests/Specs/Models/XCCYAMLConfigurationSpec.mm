@@ -1,16 +1,16 @@
 #import <Cedar/Cedar.h>
-#import "XCCConfig.h"
+#import "XCCYAMLConfiguration.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-SPEC_BEGIN(XCCConfigSpec)
+SPEC_BEGIN(XCCYAMLConfigurationSpec)
 
-describe(@"XCCConfig", ^{
-    __block XCCConfig *subject;
+describe(@"XCCYAMLConfiguration", ^{
+    __block XCCYAMLConfiguration *subject;
 
     beforeEach(^{
-        subject = [XCCConfig new];
+        subject = [XCCYAMLConfiguration new];
     });
     
     describe(@"has method", ^{

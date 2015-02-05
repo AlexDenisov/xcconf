@@ -7,9 +7,9 @@
 
 @class XCCEnvironment;
 
-@interface XCCEnvironmentEmitter : NSObject
+@interface XCCParametersCodeGenerator : NSObject
 
 - (instancetype)initWithEnvironment:(XCCEnvironment *)environment;
-- (NSString *)emitCodeGen;
+- (NSString *)generateCode;
 
 @end

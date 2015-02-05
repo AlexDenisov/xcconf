@@ -3,15 +3,15 @@
 // Copyright (c) 2015 AlexDenisov. All rights reserved.
 //
 
-#import "XCCConfigParser.h"
-#import "XCCConfig.h"
+#import "XCCConfigurationParser.h"
+#import "XCCYAMLConfiguration.h"
 #import "XCCEnvironment.h"
 
 #import <YAML/YAMLSerialization.h>
 
-@implementation XCCConfigParser
+@implementation XCCConfigurationParser
 
-- (XCCConfig *)parseYAML:(NSString *)yaml {
+- (XCCYAMLConfiguration *)parseYAML:(NSString *)yaml {
     NSError *error;
     NSDictionary *rawConfig = [YAMLSerialization objectWithYAMLString:yaml
                                                               options:kYAMLReadOptionStringScalars
@@ -20,7 +20,7 @@
     NSString *className = rawConfig[@"principalClass"];
     NSArray *environments = [self environmentsFromDictionary:rawConfig];
     
-    XCCConfig *config = [[XCCConfig alloc] initWithPrincipalClassName:className
+    XCCYAMLConfiguration *config = [[XCCYAMLConfiguration alloc] initWithPrincipalClassName:className
                                                          environments:environments];
     
     return config;

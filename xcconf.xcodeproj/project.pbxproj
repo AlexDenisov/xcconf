@@ -11,23 +11,23 @@
 		46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B2B1A82D1E8004DEA43 /* Cedar.framework */; };
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
 		46C02B471A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
-		46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */; };
-		46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */; };
 		46C02B961A82DC73004DEA43 /* Valid.yaml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46C02B791A82D78C004DEA43 /* Valid.yaml */; };
-		46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */; };
-		46C02BA81A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */; };
-		46C02BAB1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */; };
-		46C02BAC1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */; };
-		46C02BB21A836916004DEA43 /* XCCConfigCodeEmitterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BB11A836916004DEA43 /* XCCConfigCodeEmitterSpec.mm */; };
-		46C02BB51A836ABB004DEA43 /* XCCConfigCodeEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BB41A836ABB004DEA43 /* XCCConfigCodeEmitter.m */; };
-		46C02BB61A836ABB004DEA43 /* XCCConfigCodeEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BB41A836ABB004DEA43 /* XCCConfigCodeEmitter.m */; };
-		6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */; };
-		6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */; };
-		6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
+		6B8762C7F247B9AF83E4358E /* XCCConfigurationParserSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B8765FB42DE74340DB55E2E /* XCCConfigurationParserSpec.mm */; };
+		6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876800B796EE840B9A16BF /* XCCEnvironment.m */; };
+		6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B876ACA622537DA2A81924C /* XCCConfigurationCodeGeneratorSpec.mm */; };
+		6B8766E0624E22E8E1A95E5B /* XCCConfigurationParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */; };
+		6B876774D7377B3E9FDE1B94 /* XCCParametersCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */; };
+		6B8767A663447D9CAE63CCE1 /* XCCEnvironmentSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C8006218DDC43999D41 /* XCCEnvironmentSpec.mm */; };
+		6B8767DE665E2181CFB953FD /* XCCParametersCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */; };
 		6B87685105B16FBB956207FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876A1ADBB157BCE3899AAD /* main.m */; };
-		6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
-		6B876C0B7A3FB51AEC4833C9 /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */; };
-		6B876D19C0A8E03E31A882C8 /* XCCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */; };
+		6B87686317B12341ED5F44B5 /* XCCYAMLConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8767C8330885BFE5A670F7 /* XCCYAMLConfiguration.m */; };
+		6B87690D6A134317D45AE37F /* XCCConfigurationCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8766AA7AC6A17635668DC3 /* XCCConfigurationCodeGenerator.m */; };
+		6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8767C8330885BFE5A670F7 /* XCCYAMLConfiguration.m */; };
+		6B876BDE919DEFF90AB89D5F /* XCCConfigurationParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */; };
+		6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876800B796EE840B9A16BF /* XCCEnvironment.m */; };
+		6B876CACF50AE301E28B8015 /* XCCParameterCodeGeneratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B876754199E6DE92F0A7A62 /* XCCParameterCodeGeneratorSpec.mm */; };
+		6B876E95BEA8C1EC11AD9797 /* XCCYAMLConfigurationSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B8768772E34C4078EC127BA /* XCCYAMLConfigurationSpec.mm */; };
+		6B876F62B619F1BC54A86AEE /* XCCConfigurationCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8766AA7AC6A17635668DC3 /* XCCConfigurationCodeGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,25 +145,25 @@
 		46C02B0B1A82D0B5004DEA43 /* xcconf_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf_tests; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
 		46C02B451A82D2E4004DEA43 /* YAML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAML.framework; sourceTree = "<group>"; };
-		46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigSpec.mm; sourceTree = "<group>"; };
-		46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigParserSpec.mm; sourceTree = "<group>"; };
 		46C02B791A82D78C004DEA43 /* Valid.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Valid.yaml; sourceTree = "<group>"; };
-		46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentSpec.mm; sourceTree = "<group>"; };
-		46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentEmitterSpec.mm; sourceTree = "<group>"; };
-		46C02BA91A83473C004DEA43 /* XCCEnvironmentEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironmentEmitter.h; sourceTree = "<group>"; };
-		46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCEnvironmentEmitter.m; sourceTree = "<group>"; };
-		46C02BB11A836916004DEA43 /* XCCConfigCodeEmitterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigCodeEmitterSpec.mm; sourceTree = "<group>"; };
-		46C02BB31A836ABB004DEA43 /* XCCConfigCodeEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfigCodeEmitter.h; sourceTree = "<group>"; };
-		46C02BB41A836ABB004DEA43 /* XCCConfigCodeEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfigCodeEmitter.m; sourceTree = "<group>"; };
+		6B8761C1DFD97345FAF26699 /* XCCParametersCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCParametersCodeGenerator.h; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
-		6B87631056EE3A08570605A7 /* XCCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfig.h; sourceTree = "<group>"; };
+		6B87635E42B002FB2B162D10 /* XCCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironment.h; sourceTree = "<group>"; };
+		6B87652CC09997AE8E8BF777 /* XCCConfigurationCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfigurationCodeGenerator.h; sourceTree = "<group>"; };
 		6B8765C1ABC57632BAE6B38A /* xcconf_tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcconf_tests-Prefix.pch"; sourceTree = "<group>"; };
-		6B876880BAE9A79921122F8A /* XCCConfigParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfigParser.h; sourceTree = "<group>"; };
+		6B8765FB42DE74340DB55E2E /* XCCConfigurationParserSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigurationParserSpec.mm; sourceTree = "<group>"; };
+		6B8766AA7AC6A17635668DC3 /* XCCConfigurationCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfigurationCodeGenerator.m; sourceTree = "<group>"; };
+		6B876754199E6DE92F0A7A62 /* XCCParameterCodeGeneratorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCParameterCodeGeneratorSpec.mm; sourceTree = "<group>"; };
+		6B8767C8330885BFE5A670F7 /* XCCYAMLConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCYAMLConfiguration.m; sourceTree = "<group>"; };
+		6B876800B796EE840B9A16BF /* XCCEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCEnvironment.m; sourceTree = "<group>"; };
+		6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCParametersCodeGenerator.m; sourceTree = "<group>"; };
+		6B8768772E34C4078EC127BA /* XCCYAMLConfigurationSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCYAMLConfigurationSpec.mm; sourceTree = "<group>"; };
+		6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfigurationParser.m; sourceTree = "<group>"; };
 		6B876A1ADBB157BCE3899AAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B876A9C298969624B41F04B /* XCCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironment.h; sourceTree = "<group>"; };
-		6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCEnvironment.m; sourceTree = "<group>"; };
-		6B876D051620971E4CDAE200 /* XCCConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfig.m; sourceTree = "<group>"; };
-		6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCConfigParser.m; sourceTree = "<group>"; };
+		6B876ABF87FADD458ADEEFCA /* XCCConfigurationParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfigurationParser.h; sourceTree = "<group>"; };
+		6B876ACA622537DA2A81924C /* XCCConfigurationCodeGeneratorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigurationCodeGeneratorSpec.mm; sourceTree = "<group>"; };
+		6B876C8006218DDC43999D41 /* XCCEnvironmentSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentSpec.mm; sourceTree = "<group>"; };
+		6B876CCE13A78C344701AFCE /* XCCYAMLConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCYAMLConfiguration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +245,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6B876045475ABA26C948AF5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B8768772E34C4078EC127BA /* XCCYAMLConfigurationSpec.mm */,
+				6B876C8006218DDC43999D41 /* XCCEnvironmentSpec.mm */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B876180866B9C547D4927DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B876CCE13A78C344701AFCE /* XCCYAMLConfiguration.h */,
+				6B8767C8330885BFE5A670F7 /* XCCYAMLConfiguration.m */,
+				6B87635E42B002FB2B162D10 /* XCCEnvironment.h */,
+				6B876800B796EE840B9A16BF /* XCCEnvironment.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B876341E3B94F5603CA3396 /* CodeGen */ = {
+			isa = PBXGroup;
+			children = (
+				6B876ACA622537DA2A81924C /* XCCConfigurationCodeGeneratorSpec.mm */,
+				6B876754199E6DE92F0A7A62 /* XCCParameterCodeGeneratorSpec.mm */,
+			);
+			path = CodeGen;
+			sourceTree = "<group>";
+		};
 		6B8763C7105B935D43516F01 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,14 +282,32 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		6B876453836900DC782B2CFA /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				6B8768E1FD3FC9A32B3380E1 /* XCCConfigurationParser.m */,
+				6B876ABF87FADD458ADEEFCA /* XCCConfigurationParser.h */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		6B8765EAE32F3DA06CCC9AD5 /* CodeGen */ = {
+			isa = PBXGroup;
+			children = (
+				6B87652CC09997AE8E8BF777 /* XCCConfigurationCodeGenerator.h */,
+				6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */,
+				6B8766AA7AC6A17635668DC3 /* XCCConfigurationCodeGenerator.m */,
+				6B8761C1DFD97345FAF26699 /* XCCParametersCodeGenerator.h */,
+			);
+			path = CodeGen;
+			sourceTree = "<group>";
+		};
 		6B876604724C509DD8EB073C /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */,
-				46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */,
-				46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */,
-				46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */,
-				46C02BB11A836916004DEA43 /* XCCConfigCodeEmitterSpec.mm */,
+				6B876341E3B94F5603CA3396 /* CodeGen */,
+				6B8768BC50FCC285C9B51694 /* Parser */,
+				6B876045475ABA26C948AF5B /* Models */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -271,6 +318,14 @@
 				46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		6B8768BC50FCC285C9B51694 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				6B8765FB42DE74340DB55E2E /* XCCConfigurationParserSpec.mm */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		6B876C4226F13DE461A2A2B2 /* Frameworks */ = {
@@ -284,16 +339,9 @@
 		6B876E6BD68D1DC8589179AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6B87631056EE3A08570605A7 /* XCCConfig.h */,
-				6B876D051620971E4CDAE200 /* XCCConfig.m */,
-				6B876880BAE9A79921122F8A /* XCCConfigParser.h */,
-				6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */,
-				6B876A9C298969624B41F04B /* XCCEnvironment.h */,
-				6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */,
-				46C02BA91A83473C004DEA43 /* XCCEnvironmentEmitter.h */,
-				46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */,
-				46C02BB31A836ABB004DEA43 /* XCCConfigCodeEmitter.h */,
-				46C02BB41A836ABB004DEA43 /* XCCConfigCodeEmitter.m */,
+				6B876180866B9C547D4927DA /* Models */,
+				6B876453836900DC782B2CFA /* Parser */,
+				6B8765EAE32F3DA06CCC9AD5 /* CodeGen */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -480,11 +528,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
-				6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */,
-				46C02BB51A836ABB004DEA43 /* XCCConfigCodeEmitter.m in Sources */,
-				46C02BAB1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */,
-				6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */,
-				6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */,
+				6B87686317B12341ED5F44B5 /* XCCYAMLConfiguration.m in Sources */,
+				6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */,
+				6B876BDE919DEFF90AB89D5F /* XCCConfigurationParser.m in Sources */,
+				6B8767DE665E2181CFB953FD /* XCCParametersCodeGenerator.m in Sources */,
+				6B87690D6A134317D45AE37F /* XCCConfigurationCodeGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,17 +540,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C02B571A82D389004DEA43 /* XCCConfigSpec.mm in Sources */,
-				46C02BB21A836916004DEA43 /* XCCConfigCodeEmitterSpec.mm in Sources */,
 				6B87685105B16FBB956207FE /* main.m in Sources */,
-				46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */,
-				6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */,
-				46C02BB61A836ABB004DEA43 /* XCCConfigCodeEmitter.m in Sources */,
-				46C02BAC1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */,
-				46C02BA81A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm in Sources */,
-				6B876D19C0A8E03E31A882C8 /* XCCConfigParser.m in Sources */,
-				46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */,
-				6B876C0B7A3FB51AEC4833C9 /* XCCEnvironment.m in Sources */,
+				6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */,
+				6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */,
+				6B8766E0624E22E8E1A95E5B /* XCCConfigurationParser.m in Sources */,
+				6B876774D7377B3E9FDE1B94 /* XCCParametersCodeGenerator.m in Sources */,
+				6B876F62B619F1BC54A86AEE /* XCCConfigurationCodeGenerator.m in Sources */,
+				6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */,
+				6B876CACF50AE301E28B8015 /* XCCParameterCodeGeneratorSpec.mm in Sources */,
+				6B8762C7F247B9AF83E4358E /* XCCConfigurationParserSpec.mm in Sources */,
+				6B876E95BEA8C1EC11AD9797 /* XCCYAMLConfigurationSpec.mm in Sources */,
+				6B8767A663447D9CAE63CCE1 /* XCCEnvironmentSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

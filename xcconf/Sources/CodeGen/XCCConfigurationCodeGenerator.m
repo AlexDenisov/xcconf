@@ -3,19 +3,19 @@
 // Copyright (c) 2015 AlexDenisov. All rights reserved.
 //
 
-#import "XCCConfigCodeEmitter.h"
-#import "XCCConfig.h"
+#import "XCCConfigurationCodeGenerator.h"
+#import "XCCYAMLConfiguration.h"
 
-@interface XCCConfigCodeEmitter ()
+@interface XCCConfigurationCodeGenerator ()
 
-@property (strong) XCCConfig *config;
+@property (strong) XCCYAMLConfiguration *config;
 @property (copy) NSString *environmentName;
 
 @end
 
-@implementation XCCConfigCodeEmitter
+@implementation XCCConfigurationCodeGenerator
 
-- (instancetype)initWithConfig:(XCCConfig *)config environmentName:(NSString *)environmentName {
+- (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName {
     self = [super init];
     
     self.config = config;
@@ -24,15 +24,20 @@
     return self;
 }
 
-- (NSString *)emitCodeGen {
+- (NSString *)generateCode {
     NSMutableString *code = [NSMutableString new];
     
     [code appendString:self.import];
     [code appendString:self.interface];
     [code appendString:self.implementation];
+    [code appendString:self.parameters];
     [code appendString:self.end];
     
     return [code copy];
+}
+
+- (NSString *)parameters {
+    return nil;
 }
 
 - (NSString *)import {

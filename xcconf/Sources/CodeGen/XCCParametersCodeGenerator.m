@@ -3,16 +3,16 @@
 // Copyright (c) 2015 AlexDenisov. All rights reserved.
 //
 
-#import "XCCEnvironmentEmitter.h"
+#import "XCCParametersCodeGenerator.h"
 #import "XCCEnvironment.h"
 
-@interface XCCEnvironmentEmitter ()
+@interface XCCParametersCodeGenerator ()
 
 @property (strong) XCCEnvironment *environment;
 
 @end
 
-@implementation XCCEnvironmentEmitter
+@implementation XCCParametersCodeGenerator
 
 - (instancetype)initWithEnvironment:(XCCEnvironment *)environment {
     self = [super init];
@@ -22,7 +22,7 @@
     return self;
 }
 
-- (NSString *)emitCodeGen {
+- (NSString *)generateCode {
     NSDictionary *parameters = self.environment.parameters;
     NSMutableArray *codeChunks = [NSMutableArray new];
     for (NSString *key in parameters.allKeys) {

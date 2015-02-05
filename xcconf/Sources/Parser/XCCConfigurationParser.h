@@ -5,10 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class XCCConfig;
+@class XCCYAMLConfiguration;
 
-@interface XCCConfigParser : NSObject
+@interface XCCConfigurationParser : NSObject
 
-- (XCCConfig *)parseYAML:(NSString *)yaml;
+- (XCCYAMLConfiguration *)parseYAML:(NSString *)yaml;
 
 @end

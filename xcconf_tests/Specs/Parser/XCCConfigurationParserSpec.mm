@@ -1,18 +1,18 @@
 #import <Cedar/Cedar.h>
-#import "XCCConfigParser.h"
-#import "XCCConfig.h"
+#import "XCCConfigurationParser.h"
+#import "XCCYAMLConfiguration.h"
 #import "XCCEnvironment.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-SPEC_BEGIN(XCCConfigParserSpec)
+SPEC_BEGIN(XCCConfigurationParserSpec)
 
-describe(@"XCCConfigParser", ^{
-    __block XCCConfigParser *subject;
+describe(@"XCCConfigurationParser", ^{
+    __block XCCConfigurationParser *subject;
 
     beforeEach(^{
-        subject = [XCCConfigParser new];
+        subject = [XCCConfigurationParser new];
     });
     
     describe(@"has method", ^{
@@ -24,7 +24,7 @@ describe(@"XCCConfigParser", ^{
     });
     
     describe(@"parseYAML:", ^{
-        __block XCCConfig *config;
+        __block XCCYAMLConfiguration *config;
         
         context(@"valid YAML", ^{
             
@@ -37,7 +37,7 @@ describe(@"XCCConfigParser", ^{
                 config = [subject parseYAML:yaml];
             });
             
-            describe(@"returns XCCConfig", ^{
+            describe(@"returns XCCYAMLConfiguration", ^{
                 
                 it(@"with principalClassName", ^{
                     config.principalClassName should equal(@"XCCPrincipalClass");

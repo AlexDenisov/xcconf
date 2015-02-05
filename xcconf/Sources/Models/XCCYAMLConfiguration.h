@@ -7,7 +7,7 @@
 
 @class XCCEnvironment;
 
-@interface XCCConfig : NSObject
+@interface XCCYAMLConfiguration : NSObject
 
 @property (copy, readonly) NSString *principalClassName;
 @property (copy, readonly) NSArray *environments;

@@ -3,17 +3,17 @@
 // Copyright (c) 2015 AlexDenisov. All rights reserved.
 //
 
-#import "XCCConfig.h"
+#import "XCCYAMLConfiguration.h"
 #import "XCCEnvironment.h"
 
-@interface XCCConfig ()
+@interface XCCYAMLConfiguration ()
 
 @property (copy) NSString *principalClassName;
 @property (copy) NSArray *environments;
 
 @end
 
-@implementation XCCConfig
+@implementation XCCYAMLConfiguration
 
 - (instancetype)initWithPrincipalClassName:(NSString *)name environments:(NSArray *)environments {
     self = [super init];
