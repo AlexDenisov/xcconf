@@ -33,11 +33,16 @@
     [code appendString:self.implementation];
     [code appendString:self.parameters];
     [code appendString:self.end];
+
     return [code copy];
 }
 
 - (NSString *)parameters {
     XCCEnvironment *environment = self.config[self.environmentName];
+    if (!environment) {
+        NSLog(@"'%@' not found at config file", self.environmentName);
+        exit(1);
+    }
     XCCParametersCodeGenerator *codeGen = [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];
     NSString *code = [codeGen generateCode];
     if (code.length) {

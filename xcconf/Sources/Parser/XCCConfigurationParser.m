@@ -16,8 +16,23 @@
     NSDictionary *rawConfig = [YAMLSerialization objectWithYAMLString:yaml
                                                               options:kYAMLReadOptionStringScalars
                                                                 error:&error];
-    
+
+    if (error) {
+        NSLog(@"Cannot read YAML file: %@", error);
+        exit(1);
+    }
+
     NSString *className = rawConfig[@"principalClass"];
+    if (!className) {
+        NSLog(@"principalClass not found");
+        exit(1);
+    }
+
+    if (!className.length) {
+        NSLog(@"principalClass can not be empty");
+        exit(1);
+    }
+
     NSArray *environments = [self environmentsFromDictionary:rawConfig];
     
     XCCYAMLConfiguration *config = [[XCCYAMLConfiguration alloc] initWithPrincipalClassName:className
