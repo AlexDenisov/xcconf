@@ -15,6 +15,9 @@
 		46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */; };
 		46C02B961A82DC73004DEA43 /* Valid.yaml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46C02B791A82D78C004DEA43 /* Valid.yaml */; };
 		46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */; };
+		46C02BA81A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */; };
+		46C02BAB1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */; };
+		46C02BAC1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */; };
 		6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */; };
 		6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */; };
 		6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B876D051620971E4CDAE200 /* XCCConfig.m */; };
@@ -143,6 +146,9 @@
 		46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCConfigParserSpec.mm; sourceTree = "<group>"; };
 		46C02B791A82D78C004DEA43 /* Valid.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Valid.yaml; sourceTree = "<group>"; };
 		46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentSpec.mm; sourceTree = "<group>"; };
+		46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCEnvironmentEmitterSpec.mm; sourceTree = "<group>"; };
+		46C02BA91A83473C004DEA43 /* XCCEnvironmentEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCEnvironmentEmitter.h; sourceTree = "<group>"; };
+		46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCEnvironmentEmitter.m; sourceTree = "<group>"; };
 		6B8762EB5852F3E1AA490F63 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		6B87631056EE3A08570605A7 /* XCCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCConfig.h; sourceTree = "<group>"; };
 		6B8765C1ABC57632BAE6B38A /* xcconf_tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "xcconf_tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -247,6 +253,7 @@
 				46C02B561A82D389004DEA43 /* XCCConfigSpec.mm */,
 				46C02B761A82D5E6004DEA43 /* XCCConfigParserSpec.mm */,
 				46C02B971A82DFDD004DEA43 /* XCCEnvironmentSpec.mm */,
+				46C02BA71A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -276,6 +283,8 @@
 				6B876F03EA2A15B2DDC75659 /* XCCConfigParser.m */,
 				6B876A9C298969624B41F04B /* XCCEnvironment.h */,
 				6B876C7DAF3FB9333BD1602E /* XCCEnvironment.m */,
+				46C02BA91A83473C004DEA43 /* XCCEnvironmentEmitter.h */,
+				46C02BAA1A83473C004DEA43 /* XCCEnvironmentEmitter.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -463,6 +472,7 @@
 			files = (
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
 				6B876A3829BAC05C6A7446C9 /* XCCConfig.m in Sources */,
+				46C02BAB1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */,
 				6B8760DD13AE92007F0BD66E /* XCCConfigParser.m in Sources */,
 				6B876005C5A29715774B514A /* XCCEnvironment.m in Sources */,
 			);
@@ -476,6 +486,8 @@
 				6B87685105B16FBB956207FE /* main.m in Sources */,
 				46C02B771A82D5E6004DEA43 /* XCCConfigParserSpec.mm in Sources */,
 				6B8762AA870B5EF23600B1E6 /* XCCConfig.m in Sources */,
+				46C02BAC1A83473C004DEA43 /* XCCEnvironmentEmitter.m in Sources */,
+				46C02BA81A834198004DEA43 /* XCCEnvironmentEmitterSpec.mm in Sources */,
 				6B876D19C0A8E03E31A882C8 /* XCCConfigParser.m in Sources */,
 				46C02B981A82DFDD004DEA43 /* XCCEnvironmentSpec.mm in Sources */,
 				6B876C0B7A3FB51AEC4833C9 /* XCCEnvironment.m in Sources */,
