@@ -2,6 +2,8 @@
 
 YAML-based configuration for ObjC projects
 
+More details can be found [here](http://alexdenisov.github.io/blog/yaml-based-configuration-for-objc-projects/)
+
 #### Installation
 
 Just clone project and run `make install`. It will build the project and put executable into `/usr/local/bin`
