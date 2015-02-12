@@ -11,7 +11,7 @@ Just clone project and run `make install`. It will build the project and put exe
 ```bash
 git clone git@github.com:AlexDenisov/xcconf.git
 cd xcconf
-make install
+make && make install
 ```
 
 #### Try it out
