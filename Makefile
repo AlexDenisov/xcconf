@@ -5,5 +5,8 @@ install: build
 
 .PHONY: build
 build:
-	xcodebuild -target xcconf -configuration Release
+	xcodebuild -target xcconf -configuration Release 2>&1 1>/dev/null
+
+clean:
+	rm -rf build
 
