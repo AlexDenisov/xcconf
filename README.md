@@ -6,6 +6,14 @@ More details can be found [here](http://alexdenisov.github.io/blog/yaml-based-co
 
 #### Installation
 
+**Homebrew**
+
+```bash
+brew install alexdenisov/xcconf/xcconf
+```
+
+**Manually**
+
 Just clone project and run `make install`. It will build the project and put executable into `/usr/local/bin`
 
 ```bash
