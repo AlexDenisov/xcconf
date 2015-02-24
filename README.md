@@ -25,6 +25,7 @@ make && make install
 #### Try it out
 
 Install `xcconf`, open and run `Sample/Sample.xcodeproj`
+
 Take a look at this article for more details: http://alexdenisov.github.io/blog/yaml-based-configuration-for-objc-projects
 
 #### License
