@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class XCCDiagnosticsEngine;
+
 @interface XCCDriver : NSObject
+
+@property (nonatomic, strong) XCCDiagnosticsEngine *diagnosticsEngine;
 
 - (instancetype)initWithInputPath:(NSString *)inputPath
                        outputPath:(NSString *)outputPath

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "XCCDriver.h"
+#import "XCCDiagnosticsEngine.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -15,22 +16,22 @@ int main(int argc, const char * argv[]) {
         NSString *output =  @( getenv("SCRIPT_OUTPUT_FILE_0") ?: "" );
         NSString *configuration = @( getenv("CONFIGURATION") ?: "" );
 
+        XCCDiagnosticsEngine *diag = [XCCDiagnosticsEngine new];
+
         if (!input.length) {
-            NSLog(@"INPUT_FILE_PATH not found");
-            exit(1);
+            [diag criticalError:@"INPUT_FILE_PATH not found"];
         }
         if (!output.length) {
-            NSLog(@"SCRIPT_OUTPUT_FILE_0 not found");
-            exit(1);
+            [diag criticalError:@"SCRIPT_OUTPUT_FILE_0 not found"];
         }
         if (!configuration.length) {
-            NSLog(@"CONFIGURATION not found");
-            exit(1);
+            [diag criticalError:@"CONFIGURATION not found"];
         }
 
         XCCDriver *driver = [[XCCDriver alloc] initWithInputPath:input
                                                       outputPath:output
                                                configurationName:configuration];
+        driver.diagnosticsEngine = diag;
         [driver generateAndSaveOutputFile];
     }
     return 0;

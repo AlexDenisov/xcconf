@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46033E761AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
+		46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
 		46C02AEB1A82CBB0004DEA43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02AEA1A82CBB0004DEA43 /* main.m */; };
 		46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B2B1A82D1E8004DEA43 /* Cedar.framework */; };
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
@@ -33,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		466CD7C81AAB7B0C009A029F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEE1FB511DC271300029872;
+			remoteInfo = Cedar;
+		};
 		46C02B2A1A82D1E8004DEA43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46C02B1A1A82D1E8004DEA43 /* Cedar.xcodeproj */;
@@ -142,6 +151,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46033E741AAB7F3A00046796 /* XCCDiagnosticsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDiagnosticsEngine.h; sourceTree = "<group>"; };
+		46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDiagnosticsEngine.m; sourceTree = "<group>"; };
 		46C02AE71A82CBB0004DEA43 /* xcconf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C02AEA1A82CBB0004DEA43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46C02B0B1A82D0B5004DEA43 /* xcconf_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf_tests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +364,8 @@
 			children = (
 				46C02BDE1A83D275004DEA43 /* XCCDriver.h */,
 				46C02BDF1A83D275004DEA43 /* XCCDriver.m */,
+				46033E741AAB7F3A00046796 /* XCCDiagnosticsEngine.h */,
+				46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -409,6 +422,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				466CD7C91AAB7B0C009A029F /* PBXTargetDependency */,
 			);
 			name = xcconf_tests;
 			productName = xcconf_tests;
@@ -554,6 +568,7 @@
 				6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */,
 				46C02BE01A83D275004DEA43 /* XCCDriver.m in Sources */,
 				6B876BDE919DEFF90AB89D5F /* XCCConfigurationParser.m in Sources */,
+				46033E761AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */,
 				6B8767DE665E2181CFB953FD /* XCCParametersCodeGenerator.m in Sources */,
 				6B87690D6A134317D45AE37F /* XCCConfigurationCodeGenerator.m in Sources */,
 			);
@@ -564,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B87685105B16FBB956207FE /* main.m in Sources */,
+				46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */,
 				6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */,
 				6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */,
 				6B8766E0624E22E8E1A95E5B /* XCCConfigurationParser.m in Sources */,
@@ -579,6 +595,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		466CD7C91AAB7B0C009A029F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cedar;
+			targetProxy = 466CD7C81AAB7B0C009A029F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		46C02AEC1A82CBB0004DEA43 /* Debug */ = {

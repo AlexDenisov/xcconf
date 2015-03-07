@@ -6,6 +6,7 @@
 #import "XCCConfigurationParser.h"
 #import "XCCYAMLConfiguration.h"
 #import "XCCEnvironment.h"
+#import "XCCDiagnosticsEngine.h"
 
 #import <YAML/YAMLSerialization.h>
 
@@ -18,19 +19,17 @@
                                                                 error:&error];
 
     if (error) {
-        NSLog(@"Cannot read YAML file: %@", error);
-        exit(1);
+        NSString *message = [NSString stringWithFormat:@"Cannot read YAML file: %@", error];
+        [self.diagnosticsEngine criticalError:message];
     }
 
     NSString *className = rawConfig[@"principalClass"];
     if (!className) {
-        NSLog(@"principalClass not found");
-        exit(1);
+        [self.diagnosticsEngine criticalError:@"principalClass not found"];
     }
 
     if (!className.length) {
-        NSLog(@"principalClass can not be empty");
-        exit(1);
+        [self.diagnosticsEngine criticalError:@"principalClass can not be empty"];
     }
 
     NSArray *environments = [self environmentsFromDictionary:rawConfig];

@@ -6,8 +6,11 @@
 #import <Foundation/Foundation.h>
 
 @class XCCYAMLConfiguration;
+@class XCCDiagnosticsEngine;
 
 @interface XCCConfigurationCodeGenerator : NSObject
+
+@property (nonatomic, strong) XCCDiagnosticsEngine *diagnosticEngine;
 
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName;
 - (NSString *)generateCode;

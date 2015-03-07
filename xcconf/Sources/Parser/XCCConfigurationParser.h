@@ -6,8 +6,11 @@
 #import <Foundation/Foundation.h>
 
 @class XCCYAMLConfiguration;
+@class XCCDiagnosticsEngine;
 
 @interface XCCConfigurationParser : NSObject
+
+@property (nonatomic, strong) XCCDiagnosticsEngine *diagnosticsEngine;
 
 - (XCCYAMLConfiguration *)parseYAML:(NSString *)yaml;
 

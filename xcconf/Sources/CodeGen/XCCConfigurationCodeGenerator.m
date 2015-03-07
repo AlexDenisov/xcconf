@@ -6,6 +6,7 @@
 #import "XCCConfigurationCodeGenerator.h"
 #import "XCCParametersCodeGenerator.h"
 #import "XCCYAMLConfiguration.h"
+#import "XCCDiagnosticsEngine.h"
 
 @interface XCCConfigurationCodeGenerator ()
 
@@ -40,8 +41,9 @@
 - (NSString *)parameters {
     XCCEnvironment *environment = self.config[self.environmentName];
     if (!environment) {
-        NSLog(@"'%@' not found at config file", self.environmentName);
-        exit(1);
+        NSString *error = [NSString stringWithFormat:@"'%@' not found at config file",
+                           self.environmentName];
+        [self.diagnosticEngine criticalError:error];
     }
     XCCParametersCodeGenerator *codeGen = [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];
     NSString *code = [codeGen generateCode];
