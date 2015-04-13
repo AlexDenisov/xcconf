@@ -6,7 +6,7 @@ using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
 XCCEnvironment *environmentWithParameters(NSDictionary *parameters) {
-    NSString *name = @"doesn't matter";
+    NSString *name = @"some_name";
     XCCEnvironment *environment = [[XCCEnvironment alloc] initWithName:name
                                                             parameters:parameters];
     return environment;
@@ -40,7 +40,8 @@ describe(@"XCCParametersCodeGenerator", ^{
             auto env = environmentWithParameters(parameters);
             subject = [[XCCParametersCodeGenerator alloc] initWithEnvironment:env];
             
-            NSString *expectedCode = @"- \(NSString *)key { return @\"value\"; }";
+            NSString *expectedCode = @"- \(NSString *)environment { return @\"some_name\"; }\n"
+                                     @"- \(NSString *)key { return @\"value\"; }";
             NSString *actualCode = [subject generateCode];
             
             actualCode should equal(expectedCode);
@@ -51,7 +52,8 @@ describe(@"XCCParametersCodeGenerator", ^{
             auto env = environmentWithParameters(parameters);
             subject = [[XCCParametersCodeGenerator alloc] initWithEnvironment:env];
             
-            NSString *expectedCode = @"- (NSString *)key1 { return @\"value1\"; }\n"
+            NSString *expectedCode = @"- (NSString *)environment { return @\"some_name\"; }\n"
+                                     @"- (NSString *)key1 { return @\"value1\"; }\n"
                                      @"- (NSString *)key0 { return @\"value0\"; }";
             NSString *actualCode = [subject generateCode];
             

@@ -25,12 +25,23 @@
 - (NSString *)generateCode {
     NSDictionary *parameters = self.environment.parameters;
     NSMutableArray *codeChunks = [NSMutableArray new];
+
+    if (self.environment.name) {
+        NSString *environment = [self codeForValue:self.environment.name withKey:@"environment"];
+        [codeChunks addObject:environment];
+    }
+
     for (NSString *key in parameters.allKeys) {
-        NSString *format = @"- (NSString *)%@ { return @\"%@\"; }";
-        NSString *method = [NSString stringWithFormat:format, key, parameters[key]];
-        [codeChunks addObject:method];
+        NSString *chunk = [self codeForValue:parameters[key] withKey:key];
+        [codeChunks addObject:chunk];
     }
     return [codeChunks componentsJoinedByString:@"\n"];
+}
+
+- (NSString *)codeForValue:(NSString *)value withKey:(NSString *)key {
+    NSString *format = @"- (NSString *)%@ { return @\"%@\"; }";
+    NSString *method = [NSString stringWithFormat:format, key, value];
+    return method;
 }
 
 @end
