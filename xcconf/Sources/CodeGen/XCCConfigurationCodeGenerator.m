@@ -4,7 +4,9 @@
 //
 
 #import "XCCConfigurationCodeGenerator.h"
+#import "XCCParametersCodeGeneratorProtocol.h"
 #import "XCCParametersCodeGenerator.h"
+#import "XCCSecureParametersCodeGenerator.h"
 #import "XCCYAMLConfiguration.h"
 #import "XCCDiagnosticsEngine.h"
 
@@ -12,17 +14,23 @@
 
 @property (strong) XCCYAMLConfiguration *config;
 @property (copy) NSString *environmentName;
+@property BOOL secure;
 
 @end
 
 @implementation XCCConfigurationCodeGenerator
 
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName {
+    return [self initWithConfig:config environmentName:environmentName secureMode:NO];
+}
+
+- (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode {
     self = [super init];
-    
+
     self.config = config;
     self.environmentName = environmentName;
-    
+    self.secure = isSecureMode;
+
     return self;
 }
 
@@ -45,13 +53,21 @@
                            self.environmentName];
         [self.diagnosticEngine criticalError:error];
     }
-    XCCParametersCodeGenerator *codeGen = [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];
+    id<XCCParametersCodeGeneratorProtocol> codeGen = [self codeGenWithEnvironment:environment];
     NSString *code = [codeGen generateCode];
     if (code.length) {
         code = [code stringByAppendingString:@"\n"];
     }
     
     return code;
+}
+
+- (id<XCCParametersCodeGeneratorProtocol>)codeGenWithEnvironment:(XCCEnvironment *)environment {
+    if (self.secure) {
+        return [[XCCSecureParametersCodeGenerator alloc] initWithEnvironment:environment];
+    } else {
+        return [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];    
+    }
 }
 
 - (NSString *)import {

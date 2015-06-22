@@ -5,7 +5,7 @@
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-XCCEnvironment *environmentWithParameters(NSDictionary *parameters) {
+static XCCEnvironment *environmentWithParameters(NSDictionary *parameters) {
     NSString *name = @"some_name";
     XCCEnvironment *environment = [[XCCEnvironment alloc] initWithName:name
                                                             parameters:parameters];

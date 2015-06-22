@@ -13,6 +13,7 @@
 @property (nonatomic, strong) XCCDiagnosticsEngine *diagnosticEngine;
 
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName;
+- (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode;
 - (NSString *)generateCode;
 
 @end

@@ -4,12 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class XCCEnvironment;
+#import "XCCParametersCodeGeneratorProtocol.h"
 
 @interface XCCParametersCodeGenerator : NSObject
-
-- (instancetype)initWithEnvironment:(XCCEnvironment *)environment;
-- (NSString *)generateCode;
+    <XCCParametersCodeGeneratorProtocol>
 
 @end

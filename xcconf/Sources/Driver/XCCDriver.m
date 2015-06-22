@@ -37,7 +37,8 @@
     XCCYAMLConfiguration *configuration = [parser parseYAML:yaml];
     
     XCCConfigurationCodeGenerator *codeGen = [[XCCConfigurationCodeGenerator alloc] initWithConfig:configuration
-                                                                                   environmentName:self.options.configurationName];
+                                                                                   environmentName:self.options.configurationName 
+                                                                                        secureMode:self.options.isSecure];
     codeGen.diagnosticEngine = self.diagnosticsEngine;
     NSString *code = [codeGen generateCode];
     [code writeToFile:self.options.outputPath
