@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		46033E761AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
 		46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
+		4661610B1B38131D00386ACD /* XCCDriverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4661610A1B38131D00386ACD /* XCCDriverOptions.m */; };
+		4661611A1B3814D500386ACD /* XCCDriverOptionsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 466161191B3814D500386ACD /* XCCDriverOptionsBuilder.m */; };
+		4661611C1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4661611B1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm */; };
+		4661611D1B38181800386ACD /* XCCDriverOptionsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 466161191B3814D500386ACD /* XCCDriverOptionsBuilder.m */; };
+		466161341B38225800386ACD /* XCCDriverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4661610A1B38131D00386ACD /* XCCDriverOptions.m */; };
 		46C02AEB1A82CBB0004DEA43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C02AEA1A82CBB0004DEA43 /* main.m */; };
 		46C02B421A82D205004DEA43 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B2B1A82D1E8004DEA43 /* Cedar.framework */; };
 		46C02B461A82D2E4004DEA43 /* YAML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C02B451A82D2E4004DEA43 /* YAML.framework */; };
@@ -153,6 +158,12 @@
 /* Begin PBXFileReference section */
 		46033E741AAB7F3A00046796 /* XCCDiagnosticsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDiagnosticsEngine.h; sourceTree = "<group>"; };
 		46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDiagnosticsEngine.m; sourceTree = "<group>"; };
+		466161091B38131D00386ACD /* XCCDriverOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDriverOptions.h; sourceTree = "<group>"; };
+		4661610A1B38131D00386ACD /* XCCDriverOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDriverOptions.m; sourceTree = "<group>"; };
+		466161181B3814D500386ACD /* XCCDriverOptionsBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDriverOptionsBuilder.h; sourceTree = "<group>"; };
+		466161191B3814D500386ACD /* XCCDriverOptionsBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDriverOptionsBuilder.m; sourceTree = "<group>"; };
+		4661611B1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCDriverOptionsBuilderSpec.mm; sourceTree = "<group>"; };
+		466161351B3822A800386ACD /* XCCDriverOptionsBuilder_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDriverOptionsBuilder_Internal.h; sourceTree = "<group>"; };
 		46C02AE71A82CBB0004DEA43 /* xcconf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C02AEA1A82CBB0004DEA43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46C02B0B1A82D0B5004DEA43 /* xcconf_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcconf_tests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,6 +358,7 @@
 		6B876A9A0C3A0B2DEEED5924 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
+				4661611B1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -366,6 +378,11 @@
 				46C02BDF1A83D275004DEA43 /* XCCDriver.m */,
 				46033E741AAB7F3A00046796 /* XCCDiagnosticsEngine.h */,
 				46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */,
+				466161091B38131D00386ACD /* XCCDriverOptions.h */,
+				4661610A1B38131D00386ACD /* XCCDriverOptions.m */,
+				466161351B3822A800386ACD /* XCCDriverOptionsBuilder_Internal.h */,
+				466161181B3814D500386ACD /* XCCDriverOptionsBuilder.h */,
+				466161191B3814D500386ACD /* XCCDriverOptionsBuilder.m */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -564,7 +581,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
+				4661610B1B38131D00386ACD /* XCCDriverOptions.m in Sources */,
 				6B87686317B12341ED5F44B5 /* XCCYAMLConfiguration.m in Sources */,
+				4661611A1B3814D500386ACD /* XCCDriverOptionsBuilder.m in Sources */,
 				6B87650EA0469979CE4A8BB3 /* XCCEnvironment.m in Sources */,
 				46C02BE01A83D275004DEA43 /* XCCDriver.m in Sources */,
 				6B876BDE919DEFF90AB89D5F /* XCCConfigurationParser.m in Sources */,
@@ -581,11 +600,14 @@
 				6B87685105B16FBB956207FE /* main.m in Sources */,
 				46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */,
 				6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */,
+				466161341B38225800386ACD /* XCCDriverOptions.m in Sources */,
+				4661611D1B38181800386ACD /* XCCDriverOptionsBuilder.m in Sources */,
 				6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */,
 				6B8766E0624E22E8E1A95E5B /* XCCConfigurationParser.m in Sources */,
 				46C02BE11A83D275004DEA43 /* XCCDriver.m in Sources */,
 				6B876774D7377B3E9FDE1B94 /* XCCParametersCodeGenerator.m in Sources */,
 				6B876F62B619F1BC54A86AEE /* XCCConfigurationCodeGenerator.m in Sources */,
+				4661611C1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm in Sources */,
 				6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */,
 				6B876CACF50AE301E28B8015 /* XCCParameterCodeGeneratorSpec.mm in Sources */,
 				6B8762C7F247B9AF83E4358E /* XCCConfigurationParserSpec.mm in Sources */,

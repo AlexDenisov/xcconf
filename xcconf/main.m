@@ -9,29 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "XCCDriver.h"
 #import "XCCDiagnosticsEngine.h"
+#import "XCCDriverOptionsBuilder.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *input = @( getenv("INPUT_FILE_PATH") ?: "" );
-        NSString *output =  @( getenv("SCRIPT_OUTPUT_FILE_0") ?: "" );
-        NSString *configuration = @( getenv("CONFIGURATION") ?: "" );
-
         XCCDiagnosticsEngine *diag = [XCCDiagnosticsEngine new];
 
-        if (!input.length) {
-            [diag criticalError:@"INPUT_FILE_PATH not found"];
-        }
-        if (!output.length) {
-            [diag criticalError:@"SCRIPT_OUTPUT_FILE_0 not found"];
-        }
-        if (!configuration.length) {
-            [diag criticalError:@"CONFIGURATION not found"];
-        }
+        XCCDriverOptionsBuilder *builder = [XCCDriverOptionsBuilder new];
+        builder.diagnosticsEngine = diag;
+        XCCDriverOptions *options = [builder buildOptionsFromArgC:argc ArgV:argv];
 
-        XCCDriver *driver = [[XCCDriver alloc] initWithInputPath:input
-                                                      outputPath:output
-                                               configurationName:configuration];
+        XCCDriver *driver = [[XCCDriver alloc] initWithOptions:options];
         driver.diagnosticsEngine = diag;
+
         [driver generateAndSaveOutputFile];
     }
     return 0;

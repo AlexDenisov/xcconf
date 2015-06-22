@@ -10,31 +10,26 @@
 #import "XCCYAMLConfiguration.h"
 #import "XCCConfigurationParser.h"
 #import "XCCConfigurationCodeGenerator.h"
+#import "XCCDriverOptions.h"
 
 @interface XCCDriver ()
 
-@property (copy) NSString *inputPath;
-@property (copy) NSString *outputPath;
-@property (copy) NSString *configurationName;
+@property XCCDriverOptions *options;
 
 @end
 
 @implementation XCCDriver
 
-- (instancetype)initWithInputPath:(NSString *)inputPath
-                       outputPath:(NSString *)outputPath
-                configurationName:(NSString *)configurationName {
+- (instancetype)initWithOptions:(XCCDriverOptions *)options {
     self = [super init];
-
-    self.inputPath = inputPath;
-    self.outputPath = outputPath;
-    self.configurationName = configurationName;
+    
+    self.options = options;
     
     return self;
 }
 
 - (void)generateAndSaveOutputFile {
-    NSString *yaml = [NSString stringWithContentsOfFile:self.inputPath
+    NSString *yaml = [NSString stringWithContentsOfFile:self.options.inputPath
                                                encoding:NSUTF8StringEncoding
                                                   error:nil];
     
@@ -42,9 +37,10 @@
     XCCYAMLConfiguration *configuration = [parser parseYAML:yaml];
     
     XCCConfigurationCodeGenerator *codeGen = [[XCCConfigurationCodeGenerator alloc] initWithConfig:configuration
-                                                                                   environmentName:self.configurationName];
+                                                                                   environmentName:self.options.configurationName];
+    codeGen.diagnosticEngine = self.diagnosticsEngine;
     NSString *code = [codeGen generateCode];
-    [code writeToFile:self.outputPath
+    [code writeToFile:self.options.outputPath
            atomically:YES
              encoding:NSUTF8StringEncoding
                 error:nil];

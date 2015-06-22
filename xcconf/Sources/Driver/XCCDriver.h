@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class XCCDiagnosticsEngine;
+@class XCCDriverOptions;
 
 @interface XCCDriver : NSObject
 
 @property (nonatomic, strong) XCCDiagnosticsEngine *diagnosticsEngine;
 
-- (instancetype)initWithInputPath:(NSString *)inputPath
-                       outputPath:(NSString *)outputPath
-                configurationName:(NSString *)configurationName;
+- (instancetype)initWithOptions:(XCCDriverOptions *)options;
 
 - (void)generateAndSaveOutputFile;
 
