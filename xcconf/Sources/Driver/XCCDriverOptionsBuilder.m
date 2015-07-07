@@ -39,11 +39,14 @@
 
 - (XCCDriverOptions *)buildOptionsFromArgC:(const int)argc ArgV:(const char **)argv {
     BOOL secure = NO;
+    BOOL paranoid = NO;
     if (argc == 2) {
         secure = strcmp(argv[1], "secure") == 0;
+        paranoid = strcmp(argv[1], "paranoid") == 0;
     }
     XCCDriverOptions *options = [XCCDriverOptions new];
     options.isSecure = secure;
+    options.isParanoid = paranoid;
     options.inputPath = [self inputFile];
     options.outputPath = [self outputFile];
     options.configurationName = [self configurationName];

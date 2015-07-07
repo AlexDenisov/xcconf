@@ -14,5 +14,6 @@
 @property (copy) NSString *outputPath;
 @property (copy) NSString *configurationName;
 @property BOOL isSecure;
+@property BOOL isParanoid;
 
 @end

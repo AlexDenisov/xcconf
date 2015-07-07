@@ -38,7 +38,8 @@
     
     XCCConfigurationCodeGenerator *codeGen = [[XCCConfigurationCodeGenerator alloc] initWithConfig:configuration
                                                                                    environmentName:self.options.configurationName 
-                                                                                        secureMode:self.options.isSecure];
+                                                                                        secureMode:self.options.isSecure
+                                                                                      paranoidMode:self.options.isParanoid];
     codeGen.diagnosticEngine = self.diagnosticsEngine;
     NSString *code = [codeGen generateCode];
     [code writeToFile:self.options.outputPath

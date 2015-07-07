@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27D2861E1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D2861D1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m */; };
+		27D2862C1B4B8F31003114F9 /* XCCSecureXORParametersCodeGeneratorSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27D2862B1B4B8F31003114F9 /* XCCSecureXORParametersCodeGeneratorSpec.mm */; };
+		27D2862D1B4B90B7003114F9 /* XCCSecureXORParametersCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D2861D1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m */; };
 		46033E761AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
 		46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */; };
 		4661610B1B38131D00386ACD /* XCCDriverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4661610A1B38131D00386ACD /* XCCDriverOptions.m */; };
@@ -159,6 +162,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27D2861C1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCSecureXORParametersCodeGenerator.h; sourceTree = "<group>"; };
+		27D2861D1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCSecureXORParametersCodeGenerator.m; sourceTree = "<group>"; };
+		27D2862B1B4B8F31003114F9 /* XCCSecureXORParametersCodeGeneratorSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XCCSecureXORParametersCodeGeneratorSpec.mm; sourceTree = "<group>"; };
 		46033E741AAB7F3A00046796 /* XCCDiagnosticsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDiagnosticsEngine.h; sourceTree = "<group>"; };
 		46033E751AAB7F3A00046796 /* XCCDiagnosticsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCCDiagnosticsEngine.m; sourceTree = "<group>"; };
 		466161091B38131D00386ACD /* XCCDriverOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCCDriverOptions.h; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 				6B876ACA622537DA2A81924C /* XCCConfigurationCodeGeneratorSpec.mm */,
 				6B876754199E6DE92F0A7A62 /* XCCParameterCodeGeneratorSpec.mm */,
 				4661613A1B38251300386ACD /* XCCSecureParametersCodeGeneratorSpec.mm */,
+				27D2862B1B4B8F31003114F9 /* XCCSecureXORParametersCodeGeneratorSpec.mm */,
 			);
 			path = CodeGen;
 			sourceTree = "<group>";
@@ -335,6 +342,8 @@
 				6B87682FEA3C7E8E469FD41D /* XCCParametersCodeGenerator.m */,
 				466161361B3824B800386ACD /* XCCSecureParametersCodeGenerator.h */,
 				466161371B3824B800386ACD /* XCCSecureParametersCodeGenerator.m */,
+				27D2861C1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.h */,
+				27D2861D1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m */,
 			);
 			path = CodeGen;
 			sourceTree = "<group>";
@@ -591,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D2861E1B4B8E0E003114F9 /* XCCSecureXORParametersCodeGenerator.m in Sources */,
 				46C02AEB1A82CBB0004DEA43 /* main.m in Sources */,
 				4661610B1B38131D00386ACD /* XCCDriverOptions.m in Sources */,
 				6B87686317B12341ED5F44B5 /* XCCYAMLConfiguration.m in Sources */,
@@ -613,6 +623,7 @@
 				46033E771AAB7F3A00046796 /* XCCDiagnosticsEngine.m in Sources */,
 				6B876974325C7F23F26319E6 /* XCCYAMLConfiguration.m in Sources */,
 				466161391B3824B800386ACD /* XCCSecureParametersCodeGenerator.m in Sources */,
+				27D2862D1B4B90B7003114F9 /* XCCSecureXORParametersCodeGenerator.m in Sources */,
 				466161341B38225800386ACD /* XCCDriverOptions.m in Sources */,
 				4661611D1B38181800386ACD /* XCCDriverOptionsBuilder.m in Sources */,
 				6B876CA05648E28C44ADED6C /* XCCEnvironment.m in Sources */,
@@ -622,6 +633,7 @@
 				6B876F62B619F1BC54A86AEE /* XCCConfigurationCodeGenerator.m in Sources */,
 				4661611C1B38151400386ACD /* XCCDriverOptionsBuilderSpec.mm in Sources */,
 				6B87662A110FBAF34B9BE28D /* XCCConfigurationCodeGeneratorSpec.mm in Sources */,
+				27D2862C1B4B8F31003114F9 /* XCCSecureXORParametersCodeGeneratorSpec.mm in Sources */,
 				6B876CACF50AE301E28B8015 /* XCCParameterCodeGeneratorSpec.mm in Sources */,
 				6B8762C7F247B9AF83E4358E /* XCCConfigurationParserSpec.mm in Sources */,
 				4661613B1B38251300386ACD /* XCCSecureParametersCodeGeneratorSpec.mm in Sources */,
