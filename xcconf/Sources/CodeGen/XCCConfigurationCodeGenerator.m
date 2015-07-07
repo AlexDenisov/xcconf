@@ -7,6 +7,7 @@
 #import "XCCParametersCodeGeneratorProtocol.h"
 #import "XCCParametersCodeGenerator.h"
 #import "XCCSecureParametersCodeGenerator.h"
+#import "XCCSecureXORParametersCodeGenerator.h"
 #import "XCCYAMLConfiguration.h"
 #import "XCCDiagnosticsEngine.h"
 
@@ -15,6 +16,7 @@
 @property (strong) XCCYAMLConfiguration *config;
 @property (copy) NSString *environmentName;
 @property BOOL secure;
+@property BOOL paranoid;
 
 @end
 
@@ -25,14 +27,20 @@
 }
 
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode {
-    self = [super init];
+    return [self initWithConfig:config environmentName:environmentName secureMode:isSecureMode paranoidMode:NO];
+}
 
+- (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode paranoidMode:(BOOL)isParanoidMode {
+    self = [super init];
+    
     self.config = config;
     self.environmentName = environmentName;
     self.secure = isSecureMode;
-
+    self.paranoid = isParanoidMode;
+    
     return self;
 }
+
 
 - (NSString *)generateCode {
     NSMutableString *code = [NSMutableString new];
@@ -65,6 +73,8 @@
 - (id<XCCParametersCodeGeneratorProtocol>)codeGenWithEnvironment:(XCCEnvironment *)environment {
     if (self.secure) {
         return [[XCCSecureParametersCodeGenerator alloc] initWithEnvironment:environment];
+    } else if (self.paranoid) {
+        return [[XCCSecureXORParametersCodeGenerator alloc] initWithEnvironment:environment];
     } else {
         return [[XCCParametersCodeGenerator alloc] initWithEnvironment:environment];    
     }

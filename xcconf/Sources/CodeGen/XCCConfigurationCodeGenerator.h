@@ -14,6 +14,7 @@
 
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName;
 - (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode;
+- (instancetype)initWithConfig:(XCCYAMLConfiguration *)config environmentName:(NSString *)environmentName secureMode:(BOOL)isSecureMode paranoidMode:(BOOL)isParanoidMode;
 - (NSString *)generateCode;
 
 @end
