@@ -26,6 +26,14 @@
     return self;
 }
 
+- (NSString *)codeForValue:(NSString *)value withKey:(NSString *)key {
+    NSString *format = @"#pragma clang optimize off\n- (NSString *)%@ { %@ }";
+    NSString *encryptedBody = [self encryptBody:value];
+    NSString *method = [NSString stringWithFormat:format, key, encryptedBody];
+    return method;
+}
+
+
 - (NSString *)encryptBody:(NSString *)value {
     const char *rawValue = value.UTF8String;
     const unsigned long valueLength = strlen(rawValue);
