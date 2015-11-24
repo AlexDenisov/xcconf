@@ -1,6 +1,6 @@
 ### xcconf
 
-Generates app configuration at compile-time from YAML-file
+Generates a compile-time, NSString only, app configuration from a YAML-file
 
 More details can be found [here](http://alexdenisov.github.io/blog/yaml-based-configuration-for-objc-projects/)
 
