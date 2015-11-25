@@ -2,7 +2,7 @@
 
 Generates a compile-time, NSString only, app configuration from a YAML-file
 
-More details can be found [here](http://alexdenisov.github.io/blog/yaml-based-configuration-for-objc-projects/)
+More details can be found [here](http://lowlevelbits.org/yaml-based-configuration-for-objc-projects/)
 
 #### Installation
 
